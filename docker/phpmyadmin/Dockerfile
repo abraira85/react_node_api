@@ -9,4 +9,4 @@ LABEL version="1.0.0"
 LABEL release-date="3-04-2024"
 
 ## Exposed port
-EXPOSE 3306
+EXPOSE 80

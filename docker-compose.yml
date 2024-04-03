@@ -31,3 +31,18 @@ services:
             - "3306:3306"
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
+
+    # Website Service
+    web:
+        image: benedick85/nextjs_web:latest
+        build:
+            context: .
+            dockerfile: docker/web/Dockerfile
+        container_name: nextjs_web
+        restart: always
+        ports:
+            - '3000:3000'
+        volumes:
+            - ./:/app
+            - ./node_modules:/app/node_modules
+            - ./.next/:/app/.next

@@ -1,0 +1,8 @@
+node_modules/
+.idea/
+docker/
+.next/
+
+docker-compose.yml
+.editorconfig
+yarn.lock
