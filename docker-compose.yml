@@ -1,0 +1,33 @@
+############ SERVICES ############
+services:
+    # phpMyAdmin Service
+    myadmin:
+        image: benedick85/phpmyadmin:latest
+        build: docker/phpmyadmin
+        container_name: phpmyadmin
+        ports:
+            - "8080:80"
+        environment:
+            - PMA_ARBITRARY=1
+            - PMA_HOST=${MYSQL_HOST}
+        restart: always
+        depends_on:
+            - mysqldb
+
+    # MySQL Service
+    mysqldb:
+        image: benedick85/mysql:latest
+        build: docker/mysql
+        container_name: mysql_server
+        restart: always
+        env_file:
+            - ".env"
+        environment:
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        ports:
+            - "3306:3306"
+        volumes:
+            - "./data/db/mysql:/var/lib/mysql"
