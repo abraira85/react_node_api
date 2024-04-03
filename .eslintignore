@@ -1,0 +1,8 @@
+.next
+public
+node_modules
+yarn.lock
+package-lock.json
+coverage
+src/locales/trans.type.ts
+/src/graphql/types/

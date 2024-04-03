@@ -1,0 +1,7 @@
+.next/*
+
+# Ignore artifacts:
+build/*
+coverage/*
+reports/*
+/src/graphql/types/
