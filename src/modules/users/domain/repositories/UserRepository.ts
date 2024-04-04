@@ -28,12 +28,12 @@ export default class UserRepository {
                     fullname VARCHAR(255) NOT NULL,
                     email VARCHAR(255) NOT NULL,
                     password VARCHAR(255) NOT NULL,
-                    joinedDate DATETIME NOT NULL,
+                    joinedDate DATETIME(3) NOT NULL,
                     accountStatus ENUM('active', 'inactive', 'suspended') NOT NULL,
-                    profileBirthDate DATETIME NOT NULL,
-                    profileAddress VARCHAR(255) NOT NULL,
-                    profilePhoneNumber VARCHAR(20) NOT NULL,
-                    lastLogin DATETIME,
+                    birthDate DATETIME(3) NOT NULL,
+                    address VARCHAR(255) NOT NULL,
+                    phoneNumber VARCHAR(20) NOT NULL,
+                    lastLogin DATETIME(3),
                     UNIQUE KEY (email)
                 )
             `);
@@ -55,6 +55,19 @@ export default class UserRepository {
         } catch (error) {
             console.error("Error creating user:", error);
             return null;
+        }
+    }
+
+    public async getAllUsers(): Promise<User[]> {
+        try {
+            const connection = this.db.getConnection();
+            const query = "SELECT * FROM users";
+            const [rows] = await connection.query<RowDataPacket[]>(query);
+
+            return rows.map((row) => row as unknown as User);
+        } catch (error) {
+            console.error("Error getting all users:", error);
+            return [];
         }
     }
 

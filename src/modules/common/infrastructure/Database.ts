@@ -24,7 +24,6 @@ export default class Database {
                 password: process.env.MYSQL_PASSWORD || "",
                 database: process.env.MYSQL_DATABASE || "mydatabase",
             });
-
             console.log("Connection established with the database.");
         } catch (error) {
             console.error("Failed to connect to database:", error);

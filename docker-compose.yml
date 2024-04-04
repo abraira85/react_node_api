@@ -32,8 +32,8 @@ services:
         volumes:
             - "./data/db/mysql:/var/lib/mysql"
 
-    # Website Service
-    web:
+    # Application Service
+    app:
         image: benedick85/nextjs_web:latest
         build:
             context: .

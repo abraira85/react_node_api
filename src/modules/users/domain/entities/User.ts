@@ -4,11 +4,9 @@ export default interface User {
     email: string;
     password: string;
     joinedDate: Date;
-    accountStatus: 'active' | 'inactive' | 'suspended';
-    profile?: {
-        birthDate: Date;
-        address: string;
-        phoneNumber: string;
-    };
+    accountStatus: "active" | "inactive" | "suspended";
+    birthDate: Date;
+    address: string;
+    phoneNumber: string;
     lastLogin?: Date | null;
 }
