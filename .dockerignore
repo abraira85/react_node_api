@@ -3,6 +3,7 @@ node_modules/
 docker/
 .next/
 .swc/
+coverage/
 
 docker-compose.yml
 .editorconfig

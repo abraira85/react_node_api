@@ -3,10 +3,10 @@ export default interface User {
     fullname: string;
     email: string;
     password: string;
-    joinedDate: Date;
+    joinedDate?: Date;
     accountStatus: "active" | "inactive" | "suspended";
-    birthDate: Date;
-    address: string;
-    phoneNumber: string;
+    birthDate?: Date;
+    address?: string;
+    phoneNumber?: string;
     lastLogin?: Date | null;
 }

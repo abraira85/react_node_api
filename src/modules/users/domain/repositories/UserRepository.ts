@@ -39,7 +39,7 @@ export default class UserRepository {
             `);
         } catch (error) {
             console.error("Error creating users table:", error);
-            throw new Error("Failed to create users table.");
+            throw error;
         }
     }
 
@@ -54,7 +54,7 @@ export default class UserRepository {
             return { ...user, id: insertedUserId };
         } catch (error) {
             console.error("Error creating user:", error);
-            return null;
+            throw error;
         }
     }
 
@@ -67,7 +67,7 @@ export default class UserRepository {
             return rows.map((row) => row as unknown as User);
         } catch (error) {
             console.error("Error getting all users:", error);
-            return [];
+            throw error;
         }
     }
 
@@ -86,7 +86,7 @@ export default class UserRepository {
             }
         } catch (error) {
             console.error("Error getting user by ID:", error);
-            return null;
+            throw error;
         }
     }
 
@@ -102,7 +102,7 @@ export default class UserRepository {
             return { ...updatedUser, id: userId };
         } catch (error) {
             console.error("Error updating user:", error);
-            return null;
+            throw error;
         }
     }
 
@@ -114,7 +114,7 @@ export default class UserRepository {
             return true;
         } catch (error) {
             console.error("Error deleting user:", error);
-            return false;
+            throw error;
         }
     }
 }

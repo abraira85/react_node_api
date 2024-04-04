@@ -4,7 +4,7 @@ import { UserRepository } from "@/modules/users/domain/repositories";
 
 describe("User CRUD tests", () => {
     let userRepository: UserRepository;
-    let testUserIds: number[] = [];
+    const testUserIds: number[] = [];
 
     beforeAll(async () => {
         const database = Database.getInstance();

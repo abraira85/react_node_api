@@ -5,6 +5,7 @@ dotenv.config();
 
 export default class Database {
     private static instance: Database;
+
     private connection: mysql.Connection | undefined;
 
     private constructor() {}
@@ -27,6 +28,7 @@ export default class Database {
             console.log("Connection established with the database.");
         } catch (error) {
             console.error("Failed to connect to database:", error);
+            throw error;
         }
     }
 
