@@ -1,0 +1,130 @@
+{
+    "users": {
+        "meta": {
+            "title": "Usuarios",
+            "description": "Nuestros usuarios"
+        },
+        "columns": {
+            "id": "ID",
+            "fullname": "Nombre completo",
+            "address": "Dirección",
+            "phone_number": "Teléfono",
+            "joined_date": "Fecha de registro",
+            "last_login": "Último acceso",
+            "birthdate": "Fecha de nacimiento",
+            "email": "Correo electrónico",
+            "account_status": "Estado",
+            "actions": "Acciones"
+        },
+        "form": {
+            "title": {
+                "new": "Nuevo usuario",
+                "edit": "Editar usuario",
+                "view": "Ver usuario"
+            },
+            "fullname": {
+                "label": "Nombre completo",
+                "placeholder": "Escriba aquí",
+                "required": "El nombre completo es requerido."
+            },
+            "email": {
+                "label": "Correo electrónico",
+                "placeholder": "Escriba aquí",
+                "required": "El correo electrónico es requerido.",
+                "invalid": "El correo electrónico no es válido."
+            },
+            "password": {
+                "label": "Contraseña",
+                "help": "Utilice 8 o más caracteres con una combinación de letras, números y símbolos",
+                "placeholder": "Escriba aquí",
+                "required": "La contraseña es requerida.",
+                "min": "La contraseña debe tener al menos 8 caracteres.",
+                "numeric": "La contraseña debe contener al menos 1 carácter numérico",
+                "lower": "La contraseña debe contener al menos 1 carácter en minúscula",
+                "upper": "La contraseña debe contener al menos 1 carácter en mayúscula",
+                "symbol": "La contraseña debe contener al menos 1 carácter de símbolo",
+                "space": "La contraseña no puede contener espacios"
+            },
+            "account_status": {
+                "label": "Estado de la cuenta"
+            },
+            "birthdate": {
+                "label": "Fecha de nacimiento",
+                "placeholder": "Escriba aquí"
+            },
+            "address": {
+                "label": "Dirección",
+                "placeholder": "Escriba aquí"
+            },
+            "phone_number": {
+                "label": "Número de teléfono",
+                "placeholder": "Escriba aquí",
+                "invalid": "El número de teléfono no es válido."
+            }
+        }
+    },
+    "clients": {
+        "meta": {
+            "title": "Clientes",
+            "description": "Nuestros clientes"
+        }
+    },
+    "products": {
+        "meta": {
+            "title": "Productos",
+            "description": "Nuestros productos"
+        }
+    },
+    "shared": {
+        "header": {
+            "nav": {
+                "users": "Usuarios",
+                "clients": "Clientes",
+                "products": "Productos"
+            },
+            "user_dropdown": {
+                "login_as": "Autenticado como",
+                "profile": "Mi Perfil",
+                "settings": "Ajustes",
+                "help": "Ayuda",
+                "logout": "Salir"
+            }
+        },
+        "footer": {
+            "copyright": "Copyright © 2024 Rober de Avila Abraira"
+        },
+        "under_construction": {
+            "title": "En construcción",
+            "subtitle": "Esta página esta en construcción. Tenga paciencia, pronto estará disponible."
+        },
+        "actions": {
+            "view": "Ver",
+            "edit": "Editar",
+            "delete": "Borrar",
+            "actions": "Acciones",
+            "new": "Nuevo",
+            "save": "Guardar",
+            "hide": "Ocultar",
+            "show": "Mostrar",
+            "close": "Cerrar",
+            "cancel": "Cancelar"
+        },
+        "status": {
+            "active": "Activo",
+            "inactive": "Inactivo",
+            "suspended": "Suspendido"
+        },
+        "labels": {
+            "columns": "Columnas",
+            "status": "Estados",
+            "rows_per_page": "Filas por página:",
+            "total": "Total de {{count}} usuarios",
+            "search": "Buscar por nombre...",
+            "all_items_selected": "Todos los elementos seleccionados",
+            "selected": "Seleccionado {{selected}} de {{total}}",
+            "not_found": "No se encontraron elementos",
+            "are_you_sure": "Estas seguro?",
+            "confirm_delete": "¿Realmente desea eliminar estos registros? Este proceso no se puede deshacer."
+        }
+    }
+}

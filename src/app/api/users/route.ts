@@ -1,3 +1,5 @@
+'use server'
+
 import { NextRequest, NextResponse } from "next/server";
 import {
     CreateUserUseCase,
@@ -36,6 +38,7 @@ export async function POST(request: NextRequest) {
             birthDate,
             address,
             phoneNumber,
+            avatar,
         } = await parseFormData(request);
 
         const joinedDate = new Date();
@@ -49,6 +52,7 @@ export async function POST(request: NextRequest) {
             birthDate,
             address,
             phoneNumber,
+            avatar,
         };
 
         const userRepository = new UserRepository();

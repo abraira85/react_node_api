@@ -19,5 +19,6 @@ export async function parseFormData(request: NextRequest): Promise<User> {
         birthDate: new Date(formData.get("birthDate") as string),
         address: formData.get("address") as string,
         phoneNumber: formData.get("phoneNumber") as string,
+        avatar: formData.get("avatar") as string,
     };
 }

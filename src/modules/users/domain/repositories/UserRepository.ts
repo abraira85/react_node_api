@@ -31,6 +31,7 @@ export default class UserRepository {
                     joinedDate DATETIME(3) NOT NULL,
                     accountStatus ENUM('active', 'inactive', 'suspended') NOT NULL,
                     birthDate DATETIME(3) NOT NULL,
+                    avatar VARCHAR(1024) NOT NULL,
                     address VARCHAR(255) NOT NULL,
                     phoneNumber VARCHAR(20) NOT NULL,
                     lastLogin DATETIME(3),

@@ -1,0 +1,131 @@
+{
+    "users": {
+        "meta": {
+            "title": "Users",
+            "description": "Our users"
+        },
+        "columns": {
+            "id": "ID",
+            "fullname": "Fullname",
+            "address": "Address",
+            "phone_number": "Phone number",
+            "joined_date": "Joined date",
+            "last_login": "Last login",
+            "birthdate": "Birthdate",
+            "email": "Email",
+            "account_status": "Status",
+            "actions": "Actions"
+        },
+        "form": {
+            "title": {
+                "new": "New user",
+                "edit": "Edit user",
+                "view": "View user"
+            },
+            "fullname": {
+                "label": "Full name",
+                "placeholder": "Type here",
+                "required": "Full name is required."
+            },
+            "email": {
+                "label": "Email address",
+                "placeholder": "Type here",
+                "required": "Email address is required.",
+                "invalid": "Email address is invalid."
+            },
+            "password": {
+                "label": "Password",
+                "help": "Use 8 or more characters with a mix of letters, numbers & symbols",
+                "placeholder": "Type here",
+                "required": "Password is required.",
+                "min": "Password must have at least 8 characters",
+                "numeric": "Password must contain at least 1 numeric character",
+                "lower": "Password must contain at least 1 lowercase character",
+                "upper": "Password must contain at least 1 uppercase character",
+                "symbol": "Password must contain at least 1 symbol character",
+                "space": "Password cannot contain spaces"
+            },
+            "account_status": {
+                "label": "Account status"
+            },
+            "birthdate": {
+                "label": "Birthdate",
+                "placeholder": "Type here"
+            },
+            "address": {
+                "label": "Address",
+                "placeholder": "Type here"
+            },
+            "phone_number": {
+                "label": "Phone number",
+                "placeholder": "Type here",
+                "required": "Phone number is required.",
+                "invalid": "Phone number is invalid."
+            }
+        }
+    },
+    "clients": {
+        "meta": {
+            "title": "Clients",
+            "description": "Our clients"
+        }
+    },
+    "products": {
+        "meta": {
+            "title": "Products",
+            "description": "Our products"
+        }
+    },
+    "shared": {
+        "header": {
+            "nav": {
+                "users": "Users",
+                "clients": "Clients",
+                "products": "Products"
+            },
+            "user_dropdown": {
+                "login_as": "Signed in as",
+                "profile": "My Profile",
+                "settings": "Settings",
+                "help": "Help",
+                "logout": "Log Out"
+            }
+        },
+        "footer": {
+            "copyright": "Copyright © 2024 Rober de Avila Abraira"
+        },
+        "under_construction": {
+            "title": "Under construction",
+            "subtitle": "This page is under construction. Please be patient, it will be available soon."
+        },
+        "actions": {
+            "view": "View",
+            "edit": "Edit",
+            "delete": "Delete",
+            "actions": "Actions",
+            "new": "New",
+            "save": "Save",
+            "hide": "Hide",
+            "show": "Show",
+            "close": "Close",
+            "cancel": "Cancel"
+        },
+        "status": {
+            "active": "Active",
+            "inactive": "Inactive",
+            "suspended": "Suspended"
+        },
+        "labels": {
+            "columns": "Columns",
+            "status": "Status",
+            "rows_per_page": "Rows per page:",
+            "total": "Total {{count}} users",
+            "search": "Search by name...",
+            "all_items_selected": "All items selected",
+            "selected": "{{selected}} of {{total}} selected",
+            "not_found": "No elements found",
+            "are_you_sure": "Are you sure?",
+            "confirm_delete": "Do you really want to delete these records? This process cannot be undone."
+        }
+    }
+}

@@ -1,5 +1,7 @@
 import { faker } from "@faker-js/faker";
 import { program } from "commander";
+import { AvatarGenerator } from 'random-avatar-generator';
+
 import { UserRepository } from "@/modules/users/domain/repositories";
 import { User } from "@/modules/users/domain/entities";
 import { CreateUserUseCase } from "@/modules/users/application";
@@ -20,15 +22,19 @@ async function generateUsers(count: number): Promise<void> {
 
     const createUserUseCase = new CreateUserUseCase(userRepository);
 
+    const generator = new AvatarGenerator();
+
     for (let i = 0; i < count; i++) {
         const newUser: User = {
             fullname: faker.person.fullName(),
             email: faker.internet.email(),
             password: faker.internet.password(),
             joinedDate: new Date(),
+            avatar: generator.generateRandomAvatar(),
             accountStatus: "active",
             birthDate: faker.date.birthdate(),
             address: faker.location.streetAddress(),
+            lastLogin: faker.date.anytime(),
             phoneNumber: faker.phone.number("501-###-###"),
         };
 

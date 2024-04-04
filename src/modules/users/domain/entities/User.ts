@@ -5,6 +5,7 @@ export default interface User {
     password: string;
     joinedDate?: Date;
     accountStatus: "active" | "inactive" | "suspended";
+    avatar?: string;
     birthDate?: Date;
     address?: string;
     phoneNumber?: string;

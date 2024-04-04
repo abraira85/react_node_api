@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
-        "lib": ["dom", "dom.iterable", "esnext"],
+        "lib": ["es6", "dom", "dom.iterable", "esnext"],
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
@@ -12,6 +15,7 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "incremental": true,
+        "typeRoots": ["./typings", "./node_modules/@types"],
         "plugins": [
             {
                 "name": "next"
@@ -22,5 +26,5 @@
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", "./src/locales/trans.type.ts"]
 }
